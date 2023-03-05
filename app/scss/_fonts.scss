@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'SegoeWPRegular';
+	src:
+		url('../fonts/SegoeWPRegular.woff2') format('woff2'),
+		url('../fonts/SegoeWPRegular.woff') format('woff');
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SegoeWPLight';
+	src:
+		url('../fonts/SegoeWPLight.woff2') format('woff2'),
+		url('../fonts/SegoeWPLight.woff') format('woff');
+	font-display: swap;
+}
+@font-face {
+	font-family: 'SegoeWPBold';
+	src:
+		url('../fonts/SegoeWPBold.woff2') format('woff2'),
+		url('../fonts/SegoeWPBold.woff') format('woff');
+	font-display: swap;
+}

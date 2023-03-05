@@ -1,9 +1,153 @@
-html {
-	box-sizing: border-box;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+.header__top {
+	background-color: #424242;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
+.header__nav {
+	ul {
+		display: flex;
+		justify-content: flex-end;
+		height: 28px;
+		align-items: center;
+		font-family: 'SegoeWPLight';
+
+		li+li {
+			margin-left: 26px;
+		}
+
+		a {
+			color: #fff;
+		}
+	}
+}
+
+.header__menu {
+	background-color: #f3f3f3;
+	border-bottom: 1px solid #cecece;
+}
+
+.header__menu-inner {
+	height: 110px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__menu-form {
+	background-color: $green;
+	border-radius: 2px;
+	padding: 4px;
+	height: 40px;
+	max-width: 458px;
+	width: 100%;
+
+	input {
+		border-radius: 2px;
+		border: none;
+		outline: none;
+		padding: 1px 3px;
+		line-height: 30px;
+		color: #424242;
+		max-width: 328px;
+		width: 100%;
+	}
+
+	button {
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		padding: 0 12px 0 12px;
+		color: #fff;
+		font-size: 23px;
+		margin-left: -4px; //Чтобы избавиться от загадочного отступа между inline-block элементами.
+		line-height: 32px;
+		vertical-align: top;
+
+		img {
+			position: relative;
+			top: 2px;
+		}
+	}
+}
+
+.header__menu-basket {
+	max-width: 190px;
+	padding-top: 5px;
+	padding-right: 6px;
+	border-right: 1px solid #c6c6c6;
+
+	.basket {
+		padding-left: 37px;
+		position: relative;
+		font-size: 23px;
+		color: #6d6d6d;
+		margin-bottom: 8px;
+
+		span {
+			font-size: 13px;
+		}
+	}
+
+	.basket::before {
+		content: '';
+		background-image: url(../images/basket.svg);
+		position: absolute;
+		width: 27px;
+		height: 29px;
+		left: 0;
+	}
+
+	.balance {
+		display: flex;
+
+		a {
+			font-family: 'SegoeWPBold';
+			font-size: 27px;
+			color: #6d6d6d;
+		}
+
+		.checkout {
+			margin-left: 15px;
+			padding-left: 7px;
+			padding-right: 11px;
+			font-family: 'SegoeWPRegular';
+			font-size: 15px;
+			color: #fff;
+			border-radius: 3px;
+			border: 1px solid #232323;
+			background: linear-gradient(to top, #242424, #424242);
+			box-shadow: inset 1 1 rgba(#767676, .75);
+		}
+	}
+}
+
+.header__menu-list {
+	max-width: 79px;
+	text-align: center;
+	line-height: 0; //Чтобы убрать отступ снизу изображения
+	margin-left: -38px;
+	margin-top: 15px;
+
+	a {
+		position: relative;
+		line-height: 26px;
+		font-size: 21px;
+		color: #6d6d6d;
+		&::after{
+			content: '20';
+			position: absolute;
+			background-color: $green;
+			border-radius: 10px;
+			font-size: 13px;
+			color: #fff;
+			line-height: 13px;
+			padding: 2px 7px;
+			top: -10px;
+			right: -13px;
+		}
+	}
+
 }
