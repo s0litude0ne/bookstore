@@ -2,11 +2,13 @@
 @import 'global';
 @import 'fonts';
 
+//HEADER START
+
 .header__top {
 	background-color: #424242;
 }
 
-.header__nav {
+.header__nav-top {
 	ul {
 		display: flex;
 		justify-content: flex-end;
@@ -26,7 +28,7 @@
 
 .header__menu {
 	background-color: #f3f3f3;
-	border-bottom: 1px solid #cecece;
+	border-bottom: 1px solid rgba($grey, .2);
 }
 
 .header__menu-inner {
@@ -93,7 +95,7 @@
 
 	.basket::before {
 		content: '';
-		background-image: url(../images/basket.svg);
+		background-image: url(../images/icons/basket.svg);
 		position: absolute;
 		width: 27px;
 		height: 29px;
@@ -136,7 +138,8 @@
 		line-height: 26px;
 		font-size: 21px;
 		color: #6d6d6d;
-		&::after{
+
+		&::after {
 			content: '20';
 			position: absolute;
 			background-color: $green;
@@ -151,3 +154,174 @@
 	}
 
 }
+
+.header__bottom {
+	border-bottom: 1px solid rgba($grey, .2);
+}
+
+.header__nav-bottom ul {
+	display: flex;
+	align-items: center;
+	height: 39px;
+	justify-content: center;
+
+	li {
+		height: 100%;
+		padding: 0 11px 0 18px;
+	}
+
+	li:hover {
+		background: linear-gradient(to top, $green, #92d774);
+
+		a {
+			color: #fff;
+		}
+	}
+
+	li+li {
+		margin-left: 9px;
+	}
+
+	a {
+		color: $grey;
+		font-size: 19px;
+		line-height: 39px;
+	}
+}
+
+//HEADER END
+
+//SLIDER START
+
+.slider__inner {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 14px;
+}
+
+.slider__inner-slider {
+	max-width: 714px;
+}
+
+.slider__inner-item {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 304px;
+
+	img {
+		float: left;
+		margin-left: 60px;
+		margin-top: 41px;
+	}
+
+	.item__content {
+		max-width: 340px;
+		display: inline-block;
+		font-family: 'SegoeWPBold';
+		line-height: 28px;
+		color: #fff;
+		text-align: center;
+		margin-top: 120px;
+
+
+		&-title {
+			font-size: 47px;
+			line-height: 47px;
+
+			div {
+				font-size: 25px;
+				font-family: 'SegoeWPRegular';
+				line-height: 28px;
+			}
+		}
+
+		&-author {
+			font-size: 21px;
+			margin-top: 5px;
+		}
+	}
+}
+
+.slick-arrow {
+	font-size: 0;
+	padding: 0;
+	border: 0;
+	width: 38px;
+	height: 38px;
+	background-color: rgba(#000000, .46);
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	top: 127px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #fff;
+	}
+
+	&.slick-next {
+		background-image: url(../images/icons/slider-arrow-r.svg);
+		background-repeat: no-repeat;
+		background-position: 55%, 50%;
+		right: 12px;
+	}
+
+	&.slick-prev {
+		background-image: url(../images/icons/slider-arrow-l.svg);
+		background-repeat: no-repeat;
+		background-position: 45%, 50%;
+		left: 12px;
+	}
+}
+
+.slider__inner-discount {
+	max-width: 269px;
+	height: 304px;
+	background-image: url(../images/discount-bg.jpg);
+	color: #fff;
+	font-size: 27px;
+	font-family: 'SegoeSemibold';
+	text-align: center;
+	padding: 0 22px;
+
+	.discount__ {
+		&title {
+			margin-top: 15px;
+		}
+
+		&name {
+			font-family: 'SegoeWPLight';
+			font-size: 15px;
+			line-height: 26px;
+		}
+
+		&price {
+			font-size: 21px;
+			line-height: 26px;
+			font-family: 'SegoeWPLight';
+			margin-bottom: 6px;
+			div {
+				font-size: 29px;
+				font-family: 'SegoeSemibold';
+				margin-top: 3px;
+			}
+		}
+	}
+
+	img {
+		margin-top: 8px;
+	}
+
+	a {
+		font-size: 19px;
+		line-height: 26px;
+		color: #fff;
+		background: linear-gradient(to top, $green, #92d774);
+		border: 1px solid #52a452;
+		border-radius: 3px;
+		padding: 0px 15px 3px 19px;
+	}
+}
+
+//SLIDER END

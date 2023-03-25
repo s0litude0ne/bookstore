@@ -22,3 +22,10 @@
 		url('../fonts/SegoeWPBold.woff') format('woff');
 	font-display: swap;
 }
+@font-face {
+	font-family: 'SegoeSemibold';
+	src:
+		url('../fonts/SegoeSemibold.woff2') format('woff2'),
+		url('../fonts/SegoeSemibold.woff') format('woff');
+	font-display: swap;
+}
